@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3b029df-0f85-4f92-be3f-8419dbcfd763" name="Changes" comment="fix" />
+    <list default="true" id="d3b029df-0f85-4f92-be3f-8419dbcfd763" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/securedoc/unit/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +62,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.UserServiceTest.encode_shouldEncodePassword.executor": "Run",
+    "JUnit.UserServiceTest.whenCreateUser_thenControlFlowAsExpected.executor": "Run",
+    "JUnit.UserServiceTest.whenGetRoleNameWrong_thenThrowException.executor": "Run",
+    "JUnit.UserServiceTest.whenGetRoleName_thenReturnRoleName.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -80,7 +89,71 @@
       <recent name="com.example.securedoc.exception.entity" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UserServiceTest.whenGetRoleNameWrong_thenThrowException">
+    <configuration name="UserServiceTest.encode_shouldEncodePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="securedoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.securedoc.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.securedoc.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.example.securedoc.unit.UserServiceTest" />
+      <option name="METHOD_NAME" value="encode_shouldEncodePassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.whenCreateUser_thenControlFlowAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="securedoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.securedoc.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.securedoc.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.example.securedoc.unit.UserServiceTest" />
+      <option name="METHOD_NAME" value="whenCreateUser_thenControlFlowAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.whenGetRoleNameWrong_thenThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="securedoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.securedoc.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.securedoc.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.example.securedoc.unit.UserServiceTest" />
+      <option name="METHOD_NAME" value="whenGetRoleNameWrong_thenThrowException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.whenGetRoleName_thenReturnRoleName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="securedoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.securedoc.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.securedoc.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.example.securedoc.unit.UserServiceTest" />
+      <option name="METHOD_NAME" value="whenGetRoleName_thenReturnRoleName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="securedoc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.securedoc.Application" />
@@ -88,6 +161,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServiceTest.whenGetRoleNameWrong_thenThrowException" />
+        <item itemvalue="JUnit.UserServiceTest.whenGetRoleName_thenReturnRoleName" />
+        <item itemvalue="JUnit.UserServiceTest.encode_shouldEncodePassword" />
+        <item itemvalue="JUnit.UserServiceTest.whenCreateUser_thenControlFlowAsExpected" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -124,7 +205,7 @@
       <workItem from="1726153080432" duration="6861000" />
       <workItem from="1726220932805" duration="4657000" />
       <workItem from="1726349619439" duration="602000" />
-      <workItem from="1726823520398" duration="630000" />
+      <workItem from="1726823520398" duration="3963000" />
     </task>
     <task id="LOCAL-00001" summary="jwt filter">
       <created>1724775718388</created>
@@ -164,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726823637308</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1726824305632</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726824305632</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +267,7 @@
     <MESSAGE value="rework jwt filter &amp; login controller" />
     <MESSAGE value="password reset + document routes &amp; upload/download" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
