@@ -1,0 +1,16 @@
+package com.example.securedoc.request;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ForgotPasswordRequest {
+    @NotEmpty(message = "Email cannot be empty or null")
+    @Email(message = "Invalid email address")
+    private String email;
+}
