@@ -47,11 +47,11 @@ public class FilterChainConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(request -> request
                         .requestMatchers(publicEndPointMatcher()).permitAll()
-                        .requestMatchers(new AntPathRequestMatcher("/user/profile/**", POST.name())).hasAuthority("user:update")
+                        .requestMatchers(new AntPathRequestMatcher("/user/profile/**", PUT.name())).hasAuthority("user:update")
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(STATELESS))
+                .addFilterBefore(new JwtAuthenticationFilter(jwtService), UsernamePasswordAuthenticationFilter.class)
                 .addFilterAt(new AuthenticationFilter(authenticationManager, userService, jwtService), UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(new JwtAuthenticationFilter(jwtService), AuthenticationFilter.class)
                 .build();
     }
 }

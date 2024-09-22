@@ -128,25 +128,9 @@ public class UserController {
         return ResponseEntity.status(UNAUTHORIZED).body(getResponse(request, emptyMap(), "Not logged in", UNAUTHORIZED));
     }
 
-//    @GetMapping(value = "/barcode/{secret}", produces = {MediaType.IMAGE_PNG_VALUE})
-//    public BufferedImage barcode(@PathVariable String secret) {
-//        return MfaUtils.getQRCodeImage(
-//                MfaUtils.getQrCodeUri(secret, "yownponey@gmail.com"),
-//                200, 200
-//        );
-//    }
-
-    @PostMapping("/profile/{userid}")
+    @PutMapping("/profile/{userid}")
     @PreAuthorize("#userid == @methodSecurityService.principalId and hasAuthority('user:update')")
     public ResponseEntity<Response> editProfile(@PathVariable("userid") String userid, @RequestBody @Valid ProfileRequest profileRequest, HttpServletRequest request) {
-//        var user = userService.getUserByUserId(userid);
-//        user.setFirstName(profileRequest.getFirstName());
-//        user.setLastName(profileRequest.getLastName());
-//        user.setEmail(profileRequest.getEmail());
-//        user.setBio(profileRequest.getBio());
-//        user.setPhone(profileRequest.getPhone());
-//        user.setImageUrl(profileRequest.getImageUrl());
-//        user.setMfa(profileRequest.isMfa());
         var user = new ObjectMapper().convertValue(profileRequest, User.class);
         user.setUserId(userid);
 
@@ -158,4 +142,12 @@ public class UserController {
     private URI getUri() {
         return URI.create("");
     }
+
+//    @GetMapping(value = "/barcode/{secret}", produces = {MediaType.IMAGE_PNG_VALUE})
+//    public BufferedImage barcode(@PathVariable String secret) {
+//        return MfaUtils.getQRCodeImage(
+//                MfaUtils.getQrCodeUri(secret, ""),
+//                200, 200
+//        );
+//    }
 }

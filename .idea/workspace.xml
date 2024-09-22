@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3b029df-0f85-4f92-be3f-8419dbcfd763" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/securedoc/unit/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="d3b029df-0f85-4f92-be3f-8419dbcfd763" name="Changes" comment="beginning of UserServiceTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/DocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/security/FilterChainConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/security/FilterChainConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/utils/DocumentUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/utils/DocumentUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +31,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Kutorii"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Kutorii&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Kutorii/securedoc.git",
-    "accountId": "adaf37d5-2f66-434a-b4c1-7d21701fb0d7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kutorii/securedoc.git&quot;,
+    &quot;accountId&quot;: &quot;adaf37d5-2f66-434a-b4c1-7d21701fb0d7&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-22/lib/src.zip!/java.base/java/util/function/Function.java" root0="SKIP_INSPECTION" />
   </component>
@@ -60,30 +65,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.UserServiceTest.encode_shouldEncodePassword.executor": "Run",
-    "JUnit.UserServiceTest.whenCreateUser_thenControlFlowAsExpected.executor": "Run",
-    "JUnit.UserServiceTest.whenGetRoleNameWrong_thenThrowException.executor": "Run",
-    "JUnit.UserServiceTest.whenGetRoleName_thenReturnRoleName.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "572ed95600fe59333c7843c0e40343ff",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.UserServiceTest.encode_shouldEncodePassword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.whenCreateUser_thenControlFlowAsExpected.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.whenGetRoleNameWrong_thenThrowException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.whenGetRoleName_thenReturnRoleName.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;572ed95600fe59333c7843c0e40343ff&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.securedoc.exception.entity" />
@@ -205,7 +210,9 @@
       <workItem from="1726153080432" duration="6861000" />
       <workItem from="1726220932805" duration="4657000" />
       <workItem from="1726349619439" duration="602000" />
-      <workItem from="1726823520398" duration="3963000" />
+      <workItem from="1726823520398" duration="5062000" />
+      <workItem from="1726997154568" duration="2081000" />
+      <workItem from="1727029064815" duration="3425000" />
     </task>
     <task id="LOCAL-00001" summary="jwt filter">
       <created>1724775718388</created>
@@ -253,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726824305632</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="beginning of UserServiceTest">
+      <option name="closed" value="true" />
+      <created>1726827631424</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726827631424</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +283,7 @@
     <MESSAGE value="password reset + document routes &amp; upload/download" />
     <MESSAGE value="fix" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="beginning of UserServiceTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="beginning of UserServiceTest" />
   </component>
 </project>

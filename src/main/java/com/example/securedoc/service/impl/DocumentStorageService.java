@@ -14,14 +14,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.nio.file.*;
+import java.util.Arrays;
 
 import static com.example.securedoc.constant.Constants.*;
+import static com.example.securedoc.utils.DocumentUtils.getFileExtension;
+import static com.example.securedoc.utils.DocumentUtils.sanitizeFilename;
 
 @Service
 @RequiredArgsConstructor
 public class DocumentStorageService implements StorageService {
     private final DocumentService documentService;
     private final Path rootLocation = Paths.get(DOCUMENT_ROOT_LOCATION);
+    private final String[] ALLOWED_EXT = {".doc", ".xls", ".pdf"};
 
     @Override
     public void store(MultipartFile file) {
@@ -33,8 +37,18 @@ public class DocumentStorageService implements StorageService {
             if (file.isEmpty()) {
                 throw new StorageException("Failed to store empty file");
             }
+            var filename = file.getOriginalFilename();
+            if (filename == null) {
+                throw new StorageException("Filename is null");
+            }
 
-            var destinationFile = this.rootLocation.resolve(Paths.get(file.getOriginalFilename()))
+            var sanitizedFileName = sanitizeFilename(filename);
+
+            if (isNotAllowedExtension(sanitizedFileName)) {
+                throw new StorageException("File extension is not supported");
+            }
+
+            var destinationFile = this.rootLocation.resolve(Paths.get(sanitizedFileName))
                     .normalize().toAbsolutePath();
             if (destinationFile.getParent().equals(this.rootLocation.toAbsolutePath())) {
                 throw new StorageException("Cannot store file outside of current directory");
@@ -52,6 +66,12 @@ public class DocumentStorageService implements StorageService {
         } catch (IOException e) {
             throw new StorageException("Failed to store file", e);
         }
+    }
+
+    private boolean isNotAllowedExtension(String fileName) {
+        var extension = getFileExtension(fileName);
+
+        return !Arrays.asList(ALLOWED_EXT).contains(extension);
     }
 
     @Override

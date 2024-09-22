@@ -1,7 +1,6 @@
 package com.example.securedoc.controller;
 
 import com.example.securedoc.domain.Response;
-import com.example.securedoc.dto.Document;
 import com.example.securedoc.service.DocumentService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
 import java.util.Map;
 
 import static com.example.securedoc.utils.RequestUtils.getResponse;

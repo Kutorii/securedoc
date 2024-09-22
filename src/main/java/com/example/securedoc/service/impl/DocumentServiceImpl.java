@@ -35,7 +35,7 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Override
     public void createDocument(MultipartFile file) {
-        var originalFileName = file.getOriginalFilename();
+        var originalFileName = sanitizeFilename(file.getOriginalFilename());
         var fileExtension = getFileExtension(originalFileName);
         var sizeInBytes = file.getSize();
         var formattedSize = formatFileSize(sizeInBytes);
