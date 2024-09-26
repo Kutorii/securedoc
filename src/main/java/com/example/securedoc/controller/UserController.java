@@ -98,12 +98,11 @@ public class UserController {
         }
     }
 
-    @GetMapping("/logout")
+    @DeleteMapping("/logout")
     public ResponseEntity<Response> logout(HttpServletRequest request, HttpServletResponse response) {
         jwtService.removeCookie(request, response, ACCESS.getValue());
         jwtService.removeCookie(request, response, REFRESH.getValue());
         SecurityContextHolder.clearContext();
-//        request.getSession().invalidate();
 
         return ResponseEntity.ok().body(getResponse(request, emptyMap(), "Logout successful", OK));
     }

@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3b029df-0f85-4f92-be3f-8419dbcfd763" name="Changes" comment="beginning of UserServiceTest">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d3b029df-0f85-4f92-be3f-8419dbcfd763" name="Changes" comment="document upload &amp; download fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/StorageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/securedoc/service/impl/DocumentStorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/securedoc/controller/DocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/securedoc/controller/DocumentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/securedoc/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/securedoc/controller/StorageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/securedoc/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/securedoc/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/securedoc/security/FilterChainConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/securedoc/security/FilterChainConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/securedoc/service/impl/DocumentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/securedoc/service/impl/DocumentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/securedoc/service/impl/DocumentStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/securedoc/service/impl/DocumentStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/securedoc/utils/DocumentUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/securedoc/utils/DocumentUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -96,11 +100,24 @@
       <workItem from="1727112465416" duration="171000" />
       <workItem from="1727167446329" duration="297000" />
       <workItem from="1727167773429" duration="133000" />
-      <workItem from="1727335887965" duration="2441000" />
+      <workItem from="1727335887965" duration="3148000" />
     </task>
+    <task id="LOCAL-00001" summary="document upload &amp; download fix">
+      <option name="closed" value="true" />
+      <created>1727338544287</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727338544287</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="document upload &amp; download fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="document upload &amp; download fix" />
   </component>
 </project>
