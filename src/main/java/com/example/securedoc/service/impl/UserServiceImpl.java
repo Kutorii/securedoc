@@ -51,11 +51,15 @@ public class UserServiceImpl implements UserService {
             throw new RegisterException("Registration failed. Please try again");
         }
 
+        RequestContext.setUserId(0L);
         var userEntity = userRepository.save(createNewUser(firstName, lastName, email));
         var credentialEntity = new CredentialEntity(encoder.encode(password), userEntity);
+
+        RequestContext.setUserId(0L);
         credentialRepository.save(credentialEntity);
 
         var confirmationEntity = new ConfirmationEntity(userEntity);
+        RequestContext.setUserId(0L);
         confirmationRepository.save(confirmationEntity);
 
         publisher.publishEvent(new UserEvent(userEntity, REGISTRATION, Map.of("key", confirmationEntity.getKey())));
@@ -102,6 +106,7 @@ public class UserServiceImpl implements UserService {
 
         var userEntity = getUserEntityByEmail(confirmationEntity.getUser().getEmail());
         userEntity.setEnabled(true);
+        RequestContext.setUserId(userEntity.getId());
         userRepository.save(userEntity);
         confirmationRepository.delete(confirmationEntity);
     }
@@ -206,6 +211,7 @@ public class UserServiceImpl implements UserService {
         if (userEntityOptional.isPresent()) {
             var userEntity = userEntityOptional.get();
             var confirmationEntity = new ConfirmationEntity(userEntity);
+            RequestContext.setUserId(userEntity.getId());
             confirmationRepository.save(confirmationEntity);
             publisher.publishEvent(new UserEvent(userEntity, PASSWORD_RESET, Map.of("key", confirmationEntity.getKey())));
         }
