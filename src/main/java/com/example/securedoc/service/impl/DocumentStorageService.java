@@ -25,7 +25,7 @@ import static com.example.securedoc.utils.DocumentUtils.sanitizeFilename;
 public class DocumentStorageService implements StorageService {
     private final DocumentService documentService;
     private final Path rootLocation = Paths.get(DOCUMENT_ROOT_LOCATION);
-    private final String[] ALLOWED_EXT = {".doc", ".xls", ".pdf"};
+    private final String[] ALLOWED_EXT = {"docx", "xls", "pdf"};
 
     @Override
     public void store(MultipartFile file) {
@@ -54,11 +54,12 @@ public class DocumentStorageService implements StorageService {
                 throw new StorageException("Cannot store file outside of current directory");
             }
 
-            if (Files.exists(destinationFile)) {
-                throw new FileAlreadyExistsException("File already exists");
-            }
-
             try (InputStream inputStream = file.getInputStream()) {
+                if (Files.exists(destinationFile)) {
+                    throw new FileAlreadyExistsException("File already exists");
+                }
+
+                Files.createFile(destinationFile);
                 Files.copy(inputStream, destinationFile, StandardCopyOption.REPLACE_EXISTING);
             }
 

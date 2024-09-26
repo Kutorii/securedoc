@@ -115,8 +115,7 @@ public class UserController {
         if (optionalRefreshToken.isPresent()) {
             var refreshToken = optionalRefreshToken.get();
             if (jwtService.getTokenData(refreshToken, TokenData::isValid)) {
-                var auth = (ApiAuthentication) SecurityContextHolder.getContext().getAuthentication();
-                var user = (User) auth.getPrincipal();
+                var user = jwtService.getTokenData(refreshToken, TokenData::getUser);
                 // Avoid having multiple access cookies at the same time
                 jwtService.removeCookie(request, response, ACCESS.getValue());
                 jwtService.addCookie(response, user, ACCESS);

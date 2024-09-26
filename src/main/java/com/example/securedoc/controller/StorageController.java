@@ -31,7 +31,7 @@ public class StorageController {
         return ResponseEntity.created(getUri()).body(getResponse(request, emptyMap(), "File uploaded", OK));
     }
 
-    @GetMapping("/{filename.+}")
+    @GetMapping("/download/{filename:.+}")
     @PreAuthorize("hasAuthority('document:read')")
     @ResponseBody
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) {

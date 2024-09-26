@@ -1,11 +1,14 @@
 package com.example.securedoc.service.impl;
 
+import com.example.securedoc.domain.RequestContext;
 import com.example.securedoc.dto.Document;
+import com.example.securedoc.dto.User;
 import com.example.securedoc.entity.DocumentEntity;
 import com.example.securedoc.exception.dto.DocumentNotFoundException;
 import com.example.securedoc.repository.DocumentRepository;
 import com.example.securedoc.service.DocumentService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -40,6 +43,8 @@ public class DocumentServiceImpl implements DocumentService {
         var sizeInBytes = file.getSize();
         var formattedSize = formatFileSize(sizeInBytes);
 
+        var user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        RequestContext.setUserId(user.getId());
         documentRepository.save(createDocumentEntity(originalFileName, fileExtension, sizeInBytes, formattedSize));
     }
 
